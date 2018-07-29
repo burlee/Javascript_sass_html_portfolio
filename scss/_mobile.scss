@@ -1,0 +1,24 @@
+@include XL{
+
+}
+
+@include Large{
+    
+}
+
+@include Medium{
+    main{
+        align-items: center;
+        text-align: center;
+    }
+    .heading{
+        line-height: 1;
+    }
+    .menu .nav-link{
+        font-size: 24px;
+    }
+}
+
+@include Small{
+    
+}

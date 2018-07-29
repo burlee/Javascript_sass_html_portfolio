@@ -47,18 +47,29 @@
     .menu .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu .menu-branding {
-    background: #26c9a6;
+    background: #9e9e9e;
     transition: all .4s ease-out;
     transform: translate3d(0, 100%, 0);
     transition: all .4s ease-out; }
     .menu .menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu .nav-link {
-    font-size: 30px; }
+    text-transform: uppercase;
+    font-size: 30px;
+    transition: all .4s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #F7F3F1; }
     .menu .nav-link.current {
-      color: #eece1a; }
+      color: #F7F3F1; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+  .heading {
+    line-height: 1; }
+  .menu .nav-link {
+    font-size: 24px; } }
 
 * {
   box-sizing: border-box; }
@@ -89,13 +100,21 @@ h1, h2, h3 {
   h1.heading, h2.heading, h3.heading {
     font-size: 60px; }
   h1.small-heading, h2.small-heading, h3.small-heading {
+    cursor: pointer;
+    padding: 20px;
     margin-bottom: 20px;
-    padding: 5px;
-    background-color: #26cba8; }
+    color: #26c9a6;
+    background-color: rgba(247, 243, 241, 0.75); }
 
 a {
   color: #fff;
   text-decoration: none; }
+
+.menu .nav-link.current {
+  padding: 5px;
+  color: #26c9a6;
+  border-radius: 3px;
+  background: rgba(247, 243, 241, 0.75); }
 
 header {
   position: fixed;
@@ -103,7 +122,18 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #F7F3F1; }
+
+.menu-branding h1 {
+  font-size: 30px; }
+
+.menu-branding p {
+  padding: 25px;
+  margin: 0;
+  line-height: 1.45;
+  text-align: justify;
+  text-align-last: center;
+  font-size: 15px; }
 
 main {
   padding: 40px;
@@ -111,9 +141,10 @@ main {
   main .icons {
     margin-top: 10px; }
     main .icons i {
-      padding: 4px; }
+      padding: 4px;
+      cursor: pointer; }
       main .icons i:hover {
-        color: #eece1a;
+        color: #808080;
         transition: all .4s ease-out; }
   main#home {
     overflow: hidden; }

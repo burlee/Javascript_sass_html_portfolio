@@ -63,7 +63,7 @@
         }
     }
     .menu-branding{
-        background: $primary-color;
+        background: #9e9e9e;
         @include easeOut;
         transform: translate3d(0,100%,0);
         @include easeOut;
@@ -72,7 +72,9 @@
         }
     }
     .nav-link{
+        text-transform: uppercase;
         font-size: 30px;
+        @include easeOut;
         &:hover{
             color: $secondary-color;
         }

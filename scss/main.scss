@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 *{
     box-sizing: border-box;
@@ -33,28 +34,48 @@ h1, h2, h3{
         font-size: 60px;
     }
     &.small-heading{
+        cursor: pointer;
+        padding: 20px;
         margin-bottom: 20px;
-        padding: 5px;
-        background-color: lighten($primary-color, 0.5);
+        color: $primary-color;
+        background-color: rgba(247, 243, 241, 0.75);
     }
 }
 
 a{
     color: #fff;
     text-decoration: none;
+    
 }
-
+.menu .nav-link.current{
+    padding: 5px;
+    color:  $primary-color;
+    border-radius: 3px;
+    background: rgba(247, 243, 241, 0.75);
+}
 header{
     position: fixed;
     z-index: 999;
     width: 100%;
-
 }
 
 .text-secondary{
     color: $secondary-color;
 }
 
+.menu-branding{
+    h1{
+        font-size: 30px;
+    }
+    p{
+        padding: 25px;
+        margin: 0;
+        line-height: 1.45;
+        text-align: justify;
+        text-align-last: center;
+        font-size: 15px;
+    }
+}
 main{
     padding: 40px;
     height: 100%;
@@ -62,8 +83,9 @@ main{
         margin-top: 10px;
         i{
             padding: 4px;
+            cursor: pointer;
             &:hover{
-                color: $secondary-color;
+                color: #808080;
                 @include easeOut();
             }
         }
